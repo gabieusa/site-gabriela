@@ -5,20 +5,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Alinhamento do título com a logo */
-   #cont-t {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+  /* Logo na área de contato */
+  .contact-grid {
+    display: grid;
+    gap: 32px;
+    align-items: center;
+  }
 
-.title-logo {
-  height: 90px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 10px;
-}
+  .contact-logo {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 14px;
+    justify-self: center;
+  }
+
+  @media (min-width: 820px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+    }
+    .contact { max-width: none; }
+  }
 
      :root {
     --bg: #FBFAFA;
@@ -418,18 +426,19 @@
     <section id="contato" aria-labelledby="cont-t">
       <div class="wrap">
         <div class="head">
-          <h2 id="cont-t">
-            <img src="gabi-logo.png" alt="Logo Gabriela" class="title-logo">
-            Vamos conversar
-          </h2>
+        <h2 id="cont-t">Vamos conversar</h2>
           <p>Para falar de licitações, parcerias ou oportunidades, escolha o canal que preferir.</p>
         </div>
-     <div class="contact">
-  <a href="mailto:gabrielaeusa@gmail.com" rel="noopener"><strong>E-mail</strong><span>gabrielaeusa@gmail.com</span></a>
-  <a href="https://www.linkedin.com/in/gabrielafcustodio/" rel="noopener"><strong>LinkedIn</strong><span>in/gabrielafcustodio</span></a>
-  <a href="https://www.instagram.com/gabicustodio87" rel="noopener"><strong>Instagram</strong><span>@gabicustodio87</span></a>
-  <a href="https://github.com/gabieusa" rel="noopener"><strong>GitHub</strong><span>gabieusa</span></a>
-  <a href="https://novaestrategiagr.com.br" rel="noopener"><strong>Nova Estratégia G&amp;R</strong><span>novaestrategiagr.com.br</span></a>
+     <div class="contact-grid">
+  <div class="contact">
+    <a href="mailto:gabrielaeusa@gmail.com" rel="noopener"><strong>E-mail</strong><span>gabrielaeusa@gmail.com</span></a>
+    <a href="https://www.linkedin.com/in/gabrielafcustodio/" rel="noopener"><strong>LinkedIn</strong><span>in/gabrielafcustodio</span></a>
+    <a href="https://www.instagram.com/gabicustodio87" rel="noopener"><strong>Instagram</strong><span>@gabicustodio87</span></a>
+    <a href="https://github.com/gabieusa" rel="noopener"><strong>GitHub</strong><span>gabieusa</span></a>
+    <a href="https://novaestrategiagr.com.br" rel="noopener"><strong>Nova Estratégia G&amp;R</strong><span>novaestrategiagr.com.br</span></a>
+  </div>
+
+  <img src="gabi-logo.png" alt="Logo Gabriela" class="contact-logo">
 </div>
     </div>
   </section>
